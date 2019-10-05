@@ -1,0 +1,63 @@
+body {
+  background: black;
+   }
+.container{
+    width:250px;
+    transform: translateY(50%);
+    margin: 0 auto;
+    position: relative;
+  } 
+img{
+  width:250px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  opacity: 0;
+  animation: afterdash 1s linear 10s forwards;
+}
+
+
+path{
+  animation: test 3.5s linear infinite alternate;
+}
+
+svg{
+  animation: strokefade 1s linear 10s forwards;
+}
+
+@keyframes strokefade{
+  to{
+    opacity: 0;
+  }
+}
+
+@keyframes test{
+  0%{
+    stroke-width: 2px;
+    stroke-dasharray: 2500;
+    stroke-dashoffset: 2500;
+  } 
+  8%{
+    stroke-width: 2px;
+    stroke-dasharray: 2500;
+    stroke-dashoffset: 2500;
+  } 
+  92%{
+    stroke-width: 5px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 2500;
+  
+  }
+  100%{
+    stroke-width: 5px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 2500;
+  
+  }
+  
+}
+@keyframes afterdash{
+  to{
+    opacity:1;
+  }
+} 
